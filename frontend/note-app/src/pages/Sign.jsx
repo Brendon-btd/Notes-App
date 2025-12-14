@@ -18,7 +18,7 @@ function Sign() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "https://notes-app-2lc9.onrender.com",
         { name, email, password }
       );
 
