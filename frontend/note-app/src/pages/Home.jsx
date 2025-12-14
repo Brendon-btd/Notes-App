@@ -4,6 +4,9 @@ import { toast } from "react-toastify";
 import { LogOut, Pin, Edit2, Trash2 } from "lucide-react";
 
 function Home() {
+
+
+  // The notesapp logic
   const navigate = useNavigate();
   const [notes, setNotes] = useState(() => JSON.parse(localStorage.getItem("notes") || "[]"));
   const [isLatestFirst, setIsLatestFirst] = useState(() => JSON.parse(localStorage.getItem("isLatestFirst") || "true"));
@@ -71,7 +74,7 @@ function Home() {
     <div className="min-h-screen bg-slate-900 py-10 px-5">
       <div className="max-w-5xl mx-auto bg-sky-100 p-6 rounded-2xl shadow-lg flex flex-col gap-6">
         
-        {/* Header with Title and Logout */}
+        {/* Header with the title and logout */}
         <div className="flex justify-between items-center">
           <h1 className="text-3xl font-bold text-gray-900">Notes</h1>
           <button
@@ -82,7 +85,7 @@ function Home() {
           </button>
         </div>
 
-        {/* Input Section */}
+        {/*The Input Section */}
         <div className="bg-white border border-gray-300 rounded-xl p-4 flex flex-col gap-3">
           <input
             type="text"
@@ -113,7 +116,7 @@ function Home() {
           </div>
         </div>
 
-        {/*This Sort Button */}
+        {/*This is the Sort Button */}
         <div className="flex justify-end">
           <button onClick={() => setIsLatestFirst(!isLatestFirst)} className="bg-white border border-gray-300 px-4 py-2 rounded-xl text-sm hover:bg-gray-100 transition-colors">
             {isLatestFirst ? "Sort by Oldest" : "Sort by Latest"}
@@ -181,6 +184,7 @@ function NotesSection({ title, notes, expanded, setExpanded, onTogglePin, onDele
   );
 }
 
+// edit notes,delete and pin
 function NoteItem({ note, onTogglePin, onDelete, onEdit, isEditing }) {
   return (
     <div className={`m-2 p-4 rounded-xl border-l-4 transition-all ${note.pinned ? "border-purple-500" : "border-green-500"} ${isEditing ? "bg-blue-50" : "bg-gray-50"}`}>
