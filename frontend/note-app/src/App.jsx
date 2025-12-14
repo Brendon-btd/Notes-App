@@ -1,5 +1,5 @@
 import React from 'react'
-import Signup from './pages/signup'
+import Signup from './pages/Sign'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Home from './pages/Home'
 import Login from './pages/Login'
