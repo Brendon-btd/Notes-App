@@ -34,7 +34,7 @@ function Sign() {
       console.log("Full error:", error);
       console.log("Error response:", error.response?.data);
 
-      // Show the actual error message from the server
+      // Shows the actual error message from the server
       if (error.response?.data?.message) {
         setError(error.response.data.message);
       } else {

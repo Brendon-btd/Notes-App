@@ -1,5 +1,5 @@
 import React from 'react'
-import Signup from './pages/Sign'
+import SignUp from './pages/Sign'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Home from './pages/Home'
 import Login from './pages/Login'
@@ -10,9 +10,9 @@ function App() {
   return (
     <BrowserRouter >
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/register" element={<Signup />}></Route>
+        <Route path="/register" element={<SignUp />}></Route>
         <Route path="/login" element={<Login />}></Route>
+        <Route path="/" element={<Home />}></Route>
       </Routes>
       <ToastContainer />
     </BrowserRouter>
